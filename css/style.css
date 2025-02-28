@@ -318,14 +318,6 @@ body  {
         box-shadow: 1px 1px 4px rgb(69, 69, 69);
         position: relative;
 
-        /* .post-card:before {
-            position: absolute;
-            background-image: url("../img/pin.svg");
-            z-index: 10;
-            width: 10px;
-            content: 'ciao';
-        } */
-
         .post-card-pin {
             position: absolute;
             top: -5px;
