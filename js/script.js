@@ -49,7 +49,7 @@ fetch('https://lanciweb.github.io/demo/api/pictures/')
         for (let i = 0; i < data.length; i++) {
             const postData = data[i]
             const postId = postData.id
-            const postTitle = postData.title
+            const postTitle = postData.title.toUpperCase()
             const postDate = postData.date
             const postUrl = postData.url
 
