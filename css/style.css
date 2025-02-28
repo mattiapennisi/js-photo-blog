@@ -2,6 +2,7 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --titles-font: 'Edu Tas Beginner', sans-serif;
     --dates-font: 'Sometype Mono', 'monospace';
+    --card-width: 200px;
 }
 
 /* Debug */
@@ -308,6 +309,7 @@ body  {
     }
 
     .post-card {
+        width: var(--card-width);
         border-radius: 0;
         border: 0;
         font-family: var(--titles-font);
@@ -327,10 +329,9 @@ body  {
         .post-card-pin {
             position: absolute;
             top: -5px;
-            left: 40%;
+            left: calc(var(--card-width) - 55%);
             z-index: 10;
             width: 20px;
-            content: 'ciao';
         }
     }
 }
