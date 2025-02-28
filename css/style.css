@@ -293,8 +293,17 @@ body  {
     #pageTitle {
         font-family: var(--titles-font);
         font-weight: 700;
-        font-size: 3rem;
         text-align: center;
+
+        @media screen and (max-width: 480px) {
+            font-size: 1.5rem;
+        }
+        @media screen and (min-width: 481px) {
+            font-size: 2rem;
+        }
+        @media screen and (min-width: 769px) {
+            font-size: 3rem;
+        }
     }
 }
 
@@ -307,8 +316,13 @@ body  {
         width: 100%;
     }
 
+    #postsContainer {
+        margin: 0 auto;
+        padding: 0 10%;
+        max-width: 992px;
+    }
+
     .post-card {
-        width: var(--card-width);
         border-radius: 0;
         border: 0;
         font-family: var(--titles-font);
@@ -320,7 +334,8 @@ body  {
         .post-card-pin {
             position: absolute;
             top: -5px;
-            left: calc(var(--card-width) - 55%);
+            left: 50%;
+            transform: translateX(-50%)
             z-index: 10;
             width: 20px;
         }

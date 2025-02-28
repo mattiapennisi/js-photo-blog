@@ -54,17 +54,13 @@ fetch('https://lanciweb.github.io/demo/api/pictures/')
             const postUrl = postData.url
 
             postsContainer.innerHTML += `
-            <div class="post-card card p-2 pb-3 d-flex gap-2 col-6">
+            <div class="post-card card p-2 pb-3 d-flex gap-2 col">
                 <img class="post-card-pin" src="img/pin.svg" alt="">
                 <img class="post-image" src="${postUrl}" alt="Post photo ${postId}">
                 <p class="post-date">${postDate}</p>
                 <p class="post-title">${postTitle}</p>
             </div>
             `
-
-            console.log(postsContainer);
-            
-
         }
 
     })
