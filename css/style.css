@@ -84,7 +84,6 @@
 /* Body */
 
 body  {
-    height: 100vh;
     background-image: url("../img/cork.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -324,6 +323,14 @@ body  {
             left: calc(var(--card-width) - 55%);
             z-index: 10;
             width: 20px;
+        }
+
+        .post-date {
+            font-family: var(--dates-font);
+        }
+
+        .post-title {
+            font-size: 1.2rem;
         }
     }
 }
