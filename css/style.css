@@ -84,6 +84,10 @@
 /* Body */
 
 body  {
+    height: 100vh;
+    background-image: url("../img/cork.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 
     * {
         margin: 0px;
@@ -299,10 +303,6 @@ body  {
 
 #main {
     width: 100%;
-    margin: 0px;
-    background-image: url("../img/cork.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
 
     #mainRow {
         width: 100%;
