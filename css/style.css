@@ -284,6 +284,7 @@ body  {
     width: 100%;
     background-image: url("../img/wall.png");
     background-size: cover;
+    padding: 1rem;
 
     #pageTitle {
         font-family: var(--titles-font);
