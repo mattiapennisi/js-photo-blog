@@ -9,59 +9,47 @@ const postsContainer = document.querySelector('#postsContainer')
 // All api posts array
 // let postsFromApi = []
 
-// Card markup for posts
-// let postCardMarkup = `
-//     <div class="post-card card p-2 pb-3 d-flex gap-2 col-6">
-//         <img class="post-card-pin" src="img/pin.svg" alt="">
-//         <img class="post-image" src="${postUrl}" alt="Post photo ${postId}">
-//         <p class="post-text">${postDate}</p>
-//         <p class="post-text">${postTitle}</p>
-//     </div>
-//     `
-
 // FUNCTIONS
 
 /**
  * Function that generates cards upon data collected by AJAX calls
  * @constructor
  */
-/* function addElementsToContainerFromArray() {
-    // For loop to iterate all posts array
-    for (let i = 0; i < postsFromApi.length; i++) {
-        let postId = postsFromApi[i]['id']
-        let postTitle = postsFromApi[i].title
-        let postDate = postsFromApi[i].date
-        let postUrl = postsFromApi[i].url
-
-        console.log(postId)
-
-        // postsContainer.innerHTML += postCardMarkup
-
-    }
-} */
+function addElementsToContainerFromApi() {
+    
+}
 
 // APIs
 
 // API call to fetch all posts and enter them in a variable
 fetch('https://lanciweb.github.io/demo/api/pictures/')
+    // It converts data in json when fetched
     .then(response => response.json())
+    // It executes arrow function when data is converted in json format
     .then(data => {
+        // It iterates for every element in data fetched
         for (let i = 0; i < data.length; i++) {
+            // Api fetching variables
             const postData = data[i]
             const postId = postData.id
             const postTitle = postData.title.toUpperCase()
             const postDate = postData.date
             const postUrl = postData.url
 
-            postsContainer.innerHTML += `
-            <div class="post-card card p-2 pb-3 d-flex gap-2 col">
+            // Card markup for posts
+            let postCardMarkup = `
+                <div class="post-card card p-2 pb-3 d-flex gap-2 col">
                 <img class="post-card-pin" src="img/pin.svg" alt="">
-                <img class="post-image" src="${postUrl}" alt="Post photo ${postId}">
-                <p class="post-date">${postDate}</p>
-                <p class="post-title">${postTitle}</p>
-            </div>
-            `
+                <img class="post-card-image" src="${postUrl}" alt="Post photo ${postId}">
+                <p class="post-card-date">${postDate}</p>
+                <p class="post-card-title">${postTitle}</p>
+                </div>
+                `
+
+            // It adds the postcard markup to posts container
+            postsContainer.innerHTML += postCardMarkup
         }
 
     })
+    // It logs errors in Api fetching
     .catch(err => console.error(err))

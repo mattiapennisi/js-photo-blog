@@ -319,35 +319,36 @@ body  {
         margin: 0 auto;
         padding: 0 10%;
         max-width: 992px;
-    }
 
-    .post-card {
-        border-radius: 0;
-        border: 0;
-        font-family: var(--titles-font);
-        font-size: 0.7rem;
-        line-height: 0.8rem;
-        box-shadow: 1px 1px 4px rgb(69, 69, 69);
-        position: relative;
-        max-width: 200px;
-        max-height: 100%;
-
-        .post-card-pin {
-            position: absolute;
-            top: -5px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10;
-            width: 20px;
-        }
-
-        .post-date {
-            font-family: var(--dates-font);
-        }
-
-        .post-title {
-            font-size: 1.2rem;
+        .post-card {
+            border-radius: 0;
+            border: 0;
             font-family: var(--titles-font);
+            font-size: 0.7rem;
+            line-height: 0.8rem;
+            box-shadow: 1px 1px 4px rgb(69, 69, 69);
+            position: relative;
+            max-width: 200px;
+            max-height: 100%;
+    
+            .post-card-pin {
+                position: absolute;
+                top: -5px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 10;
+                width: 20px;
+            }
+    
+            .post-card-date {
+                font-family: var(--dates-font);
+            }
+    
+            .post-card-title {
+                font-size: 1.2rem;
+                font-weight: 700;
+                font-family: var(--titles-font);
+            }
         }
     }
 }
