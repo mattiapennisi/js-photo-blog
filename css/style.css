@@ -340,6 +340,10 @@ body  {
                 z-index: 10;
                 width: 20px;
             }
+
+            .post-card-image:hover {
+                cursor: pointer;
+            }
     
             .post-card-date {
                 font-family: var(--dates-font);
@@ -360,6 +364,7 @@ body  {
     width: 100%;
 }
 
+/* Photo overlay */
 #photoOverlay {
     width: 100%;
     height: 100%;
