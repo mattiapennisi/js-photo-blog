@@ -6,6 +6,7 @@ const main = document.querySelector('#main')
 const footer = document.querySelector('#footer')
 const postsContainer = document.querySelector('#postsContainer')
 const photoOverlay = document.querySelector('#photoOverlay')
+const overlayButton = document.querySelector('#overlayButton')
 
 // Api fetching variables declaration
 const postsFetchUrl = 'https://lanciweb.github.io/demo/api/pictures/'
@@ -65,9 +66,14 @@ function addCardsToContainerFromApi(url, container) {
                     photoOverlay.classList.remove('d-none')
                 })
             })   
+
+            // Add d-none class to overlay when clicking overlay button
+            overlayButton.addEventListener('click', () => {
+                photoOverlay.classList.add('d-none')
+            })
     })
 
-    // It logs errors in Api fetching
+    // It logs errors in api fetching
     .catch(err => console.error(err))
 }
 

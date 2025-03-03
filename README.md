@@ -1,7 +1,4 @@
 <!-- 
-Milestone 2
-Dopodiché facciamo sì che cliccando una qualunque foto. L’overlay ricompaia.
-Cliccando invece il button di chiusura, l’overlay scompare nuovamente.
 Milestone 3
 Inseriamo il pezzo di logica finale: quando una foto viene cliccata, dobbiamo fare in modo che sia proprio quella foto a essere mostrata all’interno dell’overlay.
 Ci sono diversi modi di farlo, prova a sperimentare :faccia_leggermente_sorridente:
