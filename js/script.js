@@ -20,8 +20,7 @@ let postUrl = null
 // FUNCTIONS
 
 /**
- * Function that generates cards upon data collected by AJAX calls
- * @constructor
+ * @description Function that generates cards upon data collected by AJAX calls
  * @param {string} url // Url for fetch method to get data from 
  * @param {string} container // Container where posts cards need to be entered 
  */
@@ -61,11 +60,14 @@ function addCardsToContainerFromApi(url, container) {
             // Variable selector for newly created post cards
             const postcardImageAll = document.querySelectorAll('.post-card-image')
 
-            // Remove d-none to overlay to make it appear on card image click
+            // It listens for a click for each image in cards
             postcardImageAll.forEach(postcardImage => {
                 postcardImage.addEventListener('click', () => {
+                    // Remove d-none to overlay to make it appear on card image click
                     photoOverlay.classList.remove('d-none')
+                    // It assigns the clicked image src to postUrl variable
                     postUrl = postcardImage.src
+                    // It changes the overlay img src to the one saved in postUrl variable
                     overlayImage.src = `${postUrl}`
                 })
             })   
