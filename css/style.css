@@ -385,10 +385,18 @@ body  {
     justify-content: start;
     align-items: center;
     gap: 3rem;
-    padding: 5rem;
+    padding: 5rem 0;
 
     #overlayImage {
-        width: 30%;
+        width: 300px;
+
+        @media screen and (min-width: 480px) {
+            width: 450px;
+        }
+
+        @media screen and (min-width: 600px) {
+            width: 570px;
+        }
     }
 }
 
