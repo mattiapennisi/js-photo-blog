@@ -5,6 +5,7 @@ const header = document.querySelector('#header')
 const main = document.querySelector('#main')
 const footer = document.querySelector('#footer')
 const postsContainer = document.querySelector('#postsContainer')
+const photoOverlay = document.querySelector('#photoOverlay')
 
 // Api fetching variables declaration
 const postsFetchUrl = 'https://lanciweb.github.io/demo/api/pictures/'
@@ -44,16 +45,26 @@ function addCardsToContainerFromApi(url, container) {
                 // Card markup for posts
                 let postCardMarkup = `
                     <div class="post-card card p-2 pb-3 d-flex gap-2 col">
-                    <img class="post-card-pin" src="img/pin.svg" alt="">
-                    <img class="post-card-image" src="${postUrl}" alt="Post photo ${postId}">
-                    <p class="post-card-date">${postDate}</p>
-                    <p class="post-card-title">${postTitle}</p>
+                        <img class="post-card-pin" src="img/pin.svg" alt="">
+                        <img class="post-card-image" src="${postUrl}" alt="Post photo ${postId}">
+                        <p class="post-card-date">${postDate}</p>
+                        <p class="post-card-title">${postTitle}</p>
                     </div>
                     `
 
                 // It adds the postcard markup to posts container
                 container.innerHTML += postCardMarkup
             }
+
+            // Variable selector for newly created post cards
+            const postcardImageAll = document.querySelectorAll('.post-card-image')
+
+            // Remove d-none to overlay to make it appear on card image click
+            postcardImageAll.forEach(postcard => {
+                postcard.addEventListener('click', () => {
+                    photoOverlay.classList.remove('d-none')
+                })
+            })   
     })
 
     // It logs errors in Api fetching
