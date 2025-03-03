@@ -331,6 +331,11 @@ body  {
             position: relative;
             max-width: 200px;
             max-height: 100%;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 3px 3px 7px 2px rgb(69, 69, 69);
+            }
     
             .post-card-pin {
                 position: absolute;
