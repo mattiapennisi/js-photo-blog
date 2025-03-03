@@ -7,6 +7,7 @@ const footer = document.querySelector('#footer')
 const postsContainer = document.querySelector('#postsContainer')
 const photoOverlay = document.querySelector('#photoOverlay')
 const overlayButton = document.querySelector('#overlayButton')
+const overlayImage = document.querySelector('#overlayImage')
 
 // Api fetching variables declaration
 const postsFetchUrl = 'https://lanciweb.github.io/demo/api/pictures/'
@@ -61,9 +62,11 @@ function addCardsToContainerFromApi(url, container) {
             const postcardImageAll = document.querySelectorAll('.post-card-image')
 
             // Remove d-none to overlay to make it appear on card image click
-            postcardImageAll.forEach(postcard => {
-                postcard.addEventListener('click', () => {
+            postcardImageAll.forEach(postcardImage => {
+                postcardImage.addEventListener('click', () => {
                     photoOverlay.classList.remove('d-none')
+                    postUrl = postcardImage.src
+                    overlayImage.src = `${postUrl}`
                 })
             })   
 
